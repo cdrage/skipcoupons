@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700&display=swap" rel="stylesheet">
+
+    <title>SkipCoupons - Always Working SkipTheDishes Coupons</title>
+    <meta name="description" content="100% Always working SkipTheDishes coupons for Canadians!">
+  </head>
+  <body>
+
+
+    <!-- Begin page content -->
+    <main role="main" class="container">
+
+    <div class="container center-text">
+      <h1 class="">SkipCoupons</h1>
+      <p class="lead">Always-working SkipTheDishes© coupons</p>
+      <p class="small">Not affiliated in any way to SkipTheDishes©</p>
+      <p>Last Updated: {{ site.data.coupons.last_modified }}</p>
+      <hr style="background-color:white; width:20%;">
+    </div>
+
+    <div class="container text-left">
+      <!-- Coupons here -->
+      <p class="lead">Links</p>
+      <p class="couponcode"><a style="color:white;" class="underline" href=" {{site.data.coupons.affiliate}}">Click here to apply $7 off your order</a></p>
+      <br>
+      <p class="lead">Codes</p>
+      {% for item in site.data.coupons.coupons %}
+      <p class="couponcode"><span class="code">{{ item[0] }}</span> - {{ item[1] }}</p>
+      {% endfor %}
+    </div>
+
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <span class="text-muted">SkipCoupons is not affiliated in ANY WAY to SkipTheDishes©</span>
+      </div>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+
+<style>
+html {
+  width: 100%;
+  min-height:100%;
+  line-height: 1;
+  font-size: 16px;
+  position:relative;
+}
+
+body {
+  width:100%;
+  height: 100vh;
+  background: #c40021;
+  color: white;
+  font-family: 'Oswald', sans-serif;
+  text-align: center;
+}
+
+h1 {
+  font-size:3em;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  background-color: #f5f5f5;
+}
+
+.container {
+  width: auto;
+  padding: 0 15px;
+}
+
+.couponcode {
+  font-size:2em;
+}
+  
+.couponcode .code {
+  font-weight:500;
+}
+  
+.couponcode .details {
+  font-weight:300;
+}
+  
+</style>
+</html>
