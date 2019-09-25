@@ -24,11 +24,10 @@
       <h1 class="">SkipCoupons</h1>
       <p class="lead">Always-working SkipTheDishes© coupons</p>
       <p class="small">Not affiliated in any way to SkipTheDishes©</p>
-      <p>Last Updated: {{ site.data.coupons.last_modified }}</p>
       <hr style="background-color:white; width:20%;">
     </div>
 
-    <div class="container center-text">
+    <div class="container text center" style="width:80%">
       <!-- Coupons here -->
       <p class="lead">Links</p>
       <p class="couponcode"><a style="color:white;" class="underline" href=" {{site.data.coupons.affiliate}}">Click here to apply $7 off your order</a></p>
@@ -39,6 +38,10 @@
       {% endfor %}
     </div>
 
+    <div class="container center-text">
+      <hr style="background-color:white; width:20%;">
+      <p>Last Updated: {{ site.data.coupons.last_modified }}</p>
+    </div>
     </main>
 
     <footer class="footer">
